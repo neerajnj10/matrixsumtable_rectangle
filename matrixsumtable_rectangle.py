@@ -22,17 +22,7 @@ def compute_summed_area_table(image):
                 new_image[row][col] = image[row][col] + new_image[row][col - 1]
             else:
                 new_image[row][col] = image[row][col]
-    # Note that two-pass code gives the same kind of results, e.g.:
-    #    for row in range(0, height):
-    #        for col in range(0, width):
-    #            if col > 0:
-    #                new_image[row][col] = image[row][col] + new_image[row][col - 1]
-    #            else:
-    #                new_image[row][col] = image[row][col]
-    #    for row in range(0, height):
-    #        for col in range(0, height):
-    #            if row > 0:
-    #                new_image[row][col] += new_image[row - 1][col]
+   
     return new_image
 
 
